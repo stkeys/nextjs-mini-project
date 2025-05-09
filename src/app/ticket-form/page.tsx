@@ -1,13 +1,20 @@
 import Image from "next/image";
 import Background from "./Background";
+import { Inconsolata } from 'next/font/google';
 
+const inconsolata = Inconsolata({
+  subsets: ['latin'], 
+  variable: '--font-inconsolata', 
+
+})
 
 
 export default function TicketForm(){
+  
   return(
-    <div className="relative w-full overflow-x-hidden h-screen bg-[url(/assets/images/background-desktop.png)]">
+    <div className="relative w-full overflow-x-hidden h-screen bg-double">
       <Background />
-      <div className="relative z-10 flex items-center justify-center flex-col space-y-10 p-10">
+      <div className={`relative z-10 flex items-center justify-center flex-col space-y-10 p-10 font-500" ${inconsolata.className}`}>
         <Image
           src="/assets/images/logo-full.svg"
           alt="Logo"
@@ -18,7 +25,7 @@ export default function TicketForm(){
           <h1 className="text-6xl font-extrabold ">Your Journey to Coding Conf <br/>2025 starts here!</h1>
           <p className="text-2xl text-[hsl(252,6%,83%)]">secure your spot at next year's biggest coding conference. </p>
         </div>
-        <div className="w-[400px]  justify-start">
+        <div className="w-[400px]  justify-start space-y-2">
           <p className=" text-[hsl(252,6%,83%)] ">Upload your avatar</p>
           <div className="w-full h-25 bg-transparent border border-dashed rounded-md flex items-center flex-col p-4" >
             <div className="bg-[hsl(245,19%,35%)] rounded-md p-1 flex  justify-center">
