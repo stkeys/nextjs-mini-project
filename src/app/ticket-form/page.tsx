@@ -1,6 +1,10 @@
+'use client';
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import Background from "./Background";
 import { Inconsolata } from 'next/font/google';
+
 
 const inconsolata = Inconsolata({
   subsets: ['latin'], 
@@ -10,11 +14,12 @@ const inconsolata = Inconsolata({
 
 
 export default function TicketForm(){
+  const router = useRouter();
   
   return(
-    <div className="relative w-full overflow-x-hidden h-screen bg-double">
+    <div className="relative w-full overflow-x-hidden  bg-double text-white">
       <Background />
-      <div className={`relative z-10 flex items-center justify-center flex-col space-y-10 p-10 font-500" ${inconsolata.className}`}>
+      <div className={`relative z-10 flex items-center justify-center flex-col space-y-10 p-10 font-500 ${inconsolata.className}`}>
         <Image
           src="/assets/images/logo-full.svg"
           alt="Logo"
@@ -46,7 +51,34 @@ export default function TicketForm(){
            />
            <p className="text-sm">Upload your photos (JPG or PNG. maxsize: 500px )</p>
          </div>
-         
+         <form 
+            className="space-y-4"
+            >
+            <label htmlFor="fullName">Full Name</label>
+            <input 
+              type="text" 
+              className="w-full border border-[hsl(245,19%,35%)] rounded-md p-2"
+            />
+
+            <label htmlFor="emailAddress">Email Address</label>
+            <input 
+              type="email" 
+              placeholder="example@gmail.com"
+              className="w-full border border-[hsl(245,19%,35%)] rounded-md p-2"
+            />
+
+            <label htmlFor="githubUsername">GitHub Username</label>
+            <input 
+              type="email" 
+              placeholder="@yourusername"
+              className="w-full border border-[hsl(245,19%,35%)] rounded-md p-2"
+            />
+
+            <button 
+              className="w-full bg-[hsl(7,71%,60%)] rounded-md text-black" onClick={() => router.push("/ticket")}>
+              Generate My Ticket
+            </button>
+          </form>
 
          
         </div>
