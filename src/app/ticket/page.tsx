@@ -5,8 +5,6 @@ import { Inconsolata } from 'next/font/google';
 
 const inconsolata = Inconsolata({
   subsets: ['latin'], 
-  variable: '--font-inconsolata', 
-
 })
 
 export default function TicketReceived(){
@@ -17,21 +15,24 @@ export default function TicketReceived(){
         <Image
           src="/assets/images/logo-full.svg"
           alt="Logo"
-          width={200}
+          width={150}
           height={50}
         />
         <div className="text-center space-y-4 flex items-center flex-col">
-          <h1 className="text-6xl font-extrabold ">Congrats, Jonathan Kristof! <br/>Your ticket is ready.</h1>
-          <p className="w-[40%] text-[hsl(252,6%,83%)]">we've emailed your ticket to <span className="text-[hsl(7,88%,67%)]">jonatan@gmail.com</span> and will send updates in the run up to the event</p>
+          <h1 className="text-3xl sm:text-5xl font-extrabold ">Congrats, <span className="text-[hsl(7,88%,67%)]">Jonathan Kristof!</span> <br/>Your ticket is ready.</h1>
+          <p className="sm:w-[40%] text-sm sm:text-md text-[hsl(252,6%,83%)]">we've emailed your ticket to <span className="text-[hsl(7,88%,67%)]">jonatan@gmail.com</span> and will send updates in the run up to the event</p>
         </div>
-        <div className="m-10 relative">
-          <Image 
-            src="/assets/images/pattern-ticket.svg"
-            alt="ticket-frame"
-           width={400}
-           height={200}
-         />
-          <div className="absolute top-0 m-4 ">
+        <div className="m-10 relative min-w-[300px] ">
+          <div className="">
+            <Image 
+              src="/assets/images/pattern-ticket.svg"
+              alt="ticket-frame"
+              width={400}
+              height={200}
+              className=" h-auto"
+           />
+          </div>
+          <div className="m-4 absolute inset-0 ">
             <div className="space-y-10">
               <div className="flex gap-4">
                 <Image 
