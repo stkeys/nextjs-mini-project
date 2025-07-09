@@ -6,7 +6,6 @@ import "./globals.css";
 
 const inconsolata = Inconsolata({
   subsets: ['latin'],         
-  variable: '--font-inconsolata', 
   
 })
 
@@ -23,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={inconsolata.variable}
+        className={inconsolata.className}
       >
         {children}
       </body>

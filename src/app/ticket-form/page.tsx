@@ -1,46 +1,74 @@
 'use client';
 
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 import Background from "./Background";
-import { Inconsolata } from 'next/font/google';
+import { Card } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { loginAction } from "../../../actions/login.action";
+import { PasswordInput } from "@/components/password-input";
+import { useEffect, useRef } from "react";
 
 
-const inconsolata = Inconsolata({
-  subsets: ['latin'], 
-  variable: '--font-inconsolata', 
-
-})
 
 
 export default function TicketForm(){
-  const router = useRouter();
+
+  // const imageViewRef = useRef(null);
+  // const imageInputRef = useRef(null)
+
+
+  // useEffect(() => {
+  //   const input = imageInputRef.current;
+  //   const view = imageViewRef.current;
+
+  //   const uploadImage = () => {
+  //     if (input?.files && input.files[0] && view) {
+  //       const imgLink = URL.createObjectURL(input.files[0]);
+  //       view.style.background = `url(${imgLink}) center/cover no-repeat`;
+  //     }
+  //   };
+  //   input?.addEventListener("change", uploadImage);
+
+  //   return () => {
+  //     input?.removeEventListener("change", uploadImage);
+  //   };
+  // }, []);
+
+
   
   return(
     <div className="relative w-full overflow-x-hidden  bg-double text-white">
       <Background />
-      <div className={`relative z-10 flex items-center justify-center flex-col space-y-10 p-10 font-500 ${inconsolata.className}`}>
+      <div className="relative z-10 flex items-center justify-center flex-col space-y-10 p-10 font-500">
         <Image
           src="/assets/images/logo-full.svg"
           alt="Logo"
-          width={200}
+          width={150}
           height={50}
+          className=""
         />
         <div className="text-center space-y-4 ">
-          <h1 className="text-6xl font-extrabold ">Your Journey to Coding Conf <br/>2025 starts here!</h1>
-          <p className="text-2xl text-[hsl(252,6%,83%)]">secure your spot at next year's biggest coding conference. </p>
+          <h1 className=" text-3xl sm:text-6xl font-extrabold ">Your Journey to Coding Conf <br/>2025 starts here!</h1>
+          <p className="text-sm sm:text-2xl text-[hsl(252,6%,83%)]">secure your spot at next year's biggest coding conference. </p>
         </div>
-        <div className="w-[400px]  justify-start space-y-2">
+        <div className="w-[300px] sm:w-[400px]  justify-start space-y-2">
           <p className=" text-[hsl(252,6%,83%)] ">Upload your avatar</p>
-          <div className="w-full h-25 bg-transparent border border-dashed rounded-md flex items-center flex-col p-4" >
-            <div className="bg-[hsl(245,19%,35%)] rounded-md p-1 flex  justify-center">
-              <Image
-                src="/assets/images/icon-upload.svg"
-                alt="Icon Upload"
-                width={30}
-                height={30} />
-            </div>
-            <p>Drag and drop or click to upload</p>
+          <div className="w-full h-25 bg-transparent border border-dashed rounded-md flex items-center justify-center flex-col p-4" id="image-view" >
+            <Label id="input-file">
+              <Input type="file" id="input-file" hidden/>
+              <div className="bg-[hsl(245,19%,35%)] rounded-md p-1 text-center">
+                <Image
+                  src="/assets/images/icon-upload.svg"
+                  alt="Icon Upload"
+                  width={30}
+                  height={30}
+                />
+              </div>
+              <p>Drag and drop or click to upload</p>
+              
+            </Label>
           </div>
           <div className="flex gap-4">
             <Image
@@ -51,35 +79,33 @@ export default function TicketForm(){
            />
            <p className="text-sm">Upload your photos (JPG or PNG. maxsize: 500px )</p>
          </div>
-         <form 
-            className="space-y-4"
-            >
-            <label htmlFor="fullName">Full Name</label>
-            <input 
-              type="text" 
-              className="w-full border border-[hsl(245,19%,35%)] rounded-md p-2"
-            />
-
-            <label htmlFor="emailAddress">Email Address</label>
-            <input 
-              type="email" 
-              placeholder="example@gmail.com"
-              className="w-full border border-[hsl(245,19%,35%)] rounded-md p-2"
-            />
-
-            <label htmlFor="githubUsername">GitHub Username</label>
-            <input 
-              type="email" 
-              placeholder="@yourusername"
-              className="w-full border border-[hsl(245,19%,35%)] rounded-md p-2"
-            />
-
-            <button 
-              className="w-full bg-[hsl(7,71%,60%)] rounded-md text-black" onClick={() => router.push("/ticket")}>
-              Generate My Ticket
-            </button>
-          </form>
-
+         
+         <Card className="border-0 ">
+            <form action={loginAction} className="space-y-4 ">
+              <div className="space-y-2">
+               <Label htmlFor="name">Full Name</Label>
+               <Input type="text" id="name" name="name"/>
+              </div>
+              <div className="space-y-2">
+               <Label htmlFor="email">Email Address</Label>
+               <Input type="email" id="email" name="email"/>
+              </div>
+              <div className="space-y-2">
+               <Label htmlFor="github">Github Username</Label>
+               <Input type="text" id="github" name="github"/>
+              </div>
+              <div className="space-y-2">
+               <Label htmlFor="name">Password</Label>
+               <PasswordInput id="password" name="password" />
+              </div>
+              <Button type="submit" className="bg-[hsl(7,71%,60%)] w-full text-[#000000] mb-20" 
+           
+                >
+                Generate My Ticket
+              </Button>
+           </form>
+         </Card>
+         
          
         </div>
       </div>
