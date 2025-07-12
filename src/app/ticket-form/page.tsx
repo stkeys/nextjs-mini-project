@@ -27,7 +27,7 @@ export default function TicketForm(){
         />
         <div className="text-center space-y-4 ">
           <h1 className=" text-3xl sm:text-6xl font-extrabold ">Your Journey to Coding Conf <br/>2025 starts here!</h1>
-          <p className="text-sm sm:text-2xl text-[hsl(252,6%,83%)]">secure your spot at next year's biggest coding conference. </p>
+          <p className="text-sm sm:text-2xl text-[hsl(252,6%,83%)]">secure your spot at next year&apos;s biggest coding conference. </p>
         </div>
         <div className="w-[300px] sm:w-[400px]  justify-start space-y-2">
           <p className=" text-[hsl(252,6%,83%)] ">Upload your avatar</p>
