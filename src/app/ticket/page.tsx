@@ -1,17 +1,13 @@
 'use client';
 import Background from "../ticket-form/Background";
 import Image from "next/image";
-import { Inconsolata } from 'next/font/google';
 
-const inconsolata = Inconsolata({
-  subsets: ['latin'], 
-})
 
 export default function TicketReceived(){
   return(
     <div className="relative w-full overflow-x-hidden  bg-double text-white">
       <Background />
-      <div className={`relative z-10 flex items-center justify-center flex-col space-y-10 p-10 font-500 ${inconsolata.className}`}>
+      <div className="relative z-10 flex items-center justify-center flex-col space-y-10 p-10 font-500">
         <Image
           src="/assets/images/logo-full.svg"
           alt="Logo"
