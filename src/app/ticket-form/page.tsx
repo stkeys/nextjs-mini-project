@@ -8,36 +8,12 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { loginAction } from "../../../actions/login.action";
 import { PasswordInput } from "@/components/password-input";
-import { useEffect, useRef } from "react";
 
 
 
 
 export default function TicketForm(){
 
-  // const imageViewRef = useRef(null);
-  // const imageInputRef = useRef(null)
-
-
-  // useEffect(() => {
-  //   const input = imageInputRef.current;
-  //   const view = imageViewRef.current;
-
-  //   const uploadImage = () => {
-  //     if (input?.files && input.files[0] && view) {
-  //       const imgLink = URL.createObjectURL(input.files[0]);
-  //       view.style.background = `url(${imgLink}) center/cover no-repeat`;
-  //     }
-  //   };
-  //   input?.addEventListener("change", uploadImage);
-
-  //   return () => {
-  //     input?.removeEventListener("change", uploadImage);
-  //   };
-  // }, []);
-
-
-  
   return(
     <div className="relative w-full overflow-x-hidden  bg-double text-white">
       <Background />
