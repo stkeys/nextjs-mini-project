@@ -16,7 +16,7 @@ export default function TicketReceived(){
         />
         <div className="text-center space-y-4 flex items-center flex-col">
           <h1 className="text-3xl sm:text-5xl font-extrabold ">Congrats, <span className="text-[hsl(7,88%,67%)]">Jonathan Kristof!</span> <br/>Your ticket is ready.</h1>
-          <p className="sm:w-[40%] text-sm sm:text-md text-[hsl(252,6%,83%)]">we've emailed your ticket to <span className="text-[hsl(7,88%,67%)]">jonatan@gmail.com</span> and will send updates in the run up to the event</p>
+          <p className="sm:w-[40%] text-sm sm:text-md text-[hsl(252,6%,83%)]">we&apos;ve emailed your ticket to <span className="text-[hsl(7,88%,67%)]">jonatan@gmail.com</span> and will send updates in the run up to the event</p>
         </div>
         <div className="m-10 relative min-w-[300px] ">
           <div className="">
