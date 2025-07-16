@@ -6,7 +6,6 @@ import { Card } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { loginAction } from "../../../actions/login.action";
 import { PasswordInput } from "@/components/password-input";
 
 
@@ -57,7 +56,7 @@ export default function TicketForm(){
          </div>
          
          <Card className="border-0 ">
-            <form action={loginAction} className="space-y-4 ">
+            <form className="space-y-4 ">
               <div className="space-y-2">
                <Label htmlFor="name">Full Name</Label>
                <Input type="text" id="name" name="name"/>
