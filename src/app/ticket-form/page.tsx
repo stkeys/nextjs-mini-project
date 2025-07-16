@@ -17,7 +17,7 @@ export default function TicketForm(){
   return(
     <div className="relative w-full overflow-x-hidden  bg-double text-white">
       <Background />
-      <div className="relative z-10 flex items-center justify-center flex-col space-y-10 p-10 font-500">
+      <div className="relative z-10 flex items-center justify-center flex-col space-y-10 p-10 ">
         <Image
           src="/assets/images/logo-full.svg"
           alt="Logo"
