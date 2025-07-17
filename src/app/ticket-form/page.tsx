@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Background from "./Background";
+import { useRouter } from "next/navigation";
 import { Card } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -12,7 +13,7 @@ import { PasswordInput } from "@/components/password-input";
 
 
 export default function TicketForm(){
-
+ const router = useRouter();
   return(
     <div className="relative w-full overflow-x-hidden  bg-double text-white">
       <Background />
@@ -73,8 +74,11 @@ export default function TicketForm(){
                <Label htmlFor="name">Password</Label>
                <PasswordInput id="password" name="password" />
               </div>
-              <Button type="submit" className="bg-[hsl(7,71%,60%)] w-full text-[#000000] mb-20" 
-           
+              <Button className="bg-[hsl(7,71%,60%)] w-full text-[#000000] mb-20" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push('/ticket');
+                }}
                 >
                 Generate My Ticket
               </Button>
