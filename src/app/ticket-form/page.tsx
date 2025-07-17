@@ -29,7 +29,7 @@ export default function TicketForm(){
           <h1 className=" text-3xl sm:text-6xl font-extrabold ">Your Journey to Coding Conf <br/>2025 starts here!</h1>
           <p className="text-sm sm:text-2xl text-[hsl(252,6%,83%)]">secure your spot at next year&apos;s biggest coding conference. </p>
         </div>
-        <div className="w-[300px] sm:w-[400px]  justify-start space-y-2">
+        <div className="max-w-full p-2  justify-start space-y-2">
           <p className=" text-[hsl(252,6%,83%)] ">Upload your avatar</p>
           <div className="w-full h-25 bg-transparent border border-dashed rounded-md flex items-center justify-center flex-col p-4" id="image-view" >
             <Label id="input-file">
