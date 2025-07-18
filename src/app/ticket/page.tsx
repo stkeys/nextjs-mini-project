@@ -38,7 +38,7 @@ export default function TicketReceived(){
                   height={30}
                 />
                <div>
-                  <p className="text-2xl">Coding Conf</p>
+                  <p className="sm:text-base">Coding Conf</p>
                   <p className="text-sm text-[hsl(252,6%,83%)]">Jan 31, 2025 / Austin, TX</p>
                </div>
              </div>
@@ -55,7 +55,7 @@ export default function TicketReceived(){
                 </div>
                 
                 <div>
-                  <p className="text-xl">Jonatan Kristof</p>
+                  <p className="sm:text-base">Jonatan Kristof</p>
                   <div className="flex gap-2">
                     <Image 
                       src="/assets/images/icon-github.svg"
