@@ -28,8 +28,8 @@ export default function TicketReceived(){
               className=" h-auto"
            />
           </div>
-          <div className="m-4 absolute inset-0 ">
-            <div className="space-y-10">
+          <div className="m-2 absolute inset-0 ">
+            <div className="space-y-6 min-sm:space-y-10">
               <div className="flex gap-4">
                 <Image 
                   src="/assets/images/logo-mark.svg"
@@ -38,8 +38,8 @@ export default function TicketReceived(){
                   height={30}
                 />
                <div>
-                  <p className="sm:text-base">Coding Conf</p>
-                  <p className="text-sm text-[hsl(252,6%,83%)]">Jan 31, 2025 / Austin, TX</p>
+                  <p className="text-sm">Coding Conf</p>
+                  <p className="text-xs text-[hsl(252,6%,83%)]">Jan 31, 2025 / Austin, TX</p>
                </div>
              </div>
               
@@ -48,14 +48,14 @@ export default function TicketReceived(){
                   <Image 
                     src="/assets/images/image-avatar.jpg"
                     alt="image-avatar"
-                    width={50}
+                    width={40}
                     height={20}
                     className="rounded-sm"
                   />
                 </div>
                 
                 <div>
-                  <p className="sm:text-base">Jonatan Kristof</p>
+                  <p className="text-sm">Jonatan Kristof</p>
                   <div className="flex gap-2">
                     <Image 
                       src="/assets/images/icon-github.svg"
@@ -63,7 +63,7 @@ export default function TicketReceived(){
                       width={20}
                       height={20}
                     />
-                    <p className="text-sm text-[hsl(252,6%,83%)]">@jonatankristof@f0101</p>
+                    <p className="text-xs text-[hsl(252,6%,83%)]">@jonatankristof@f0101</p>
                     
                   </div>
                  
