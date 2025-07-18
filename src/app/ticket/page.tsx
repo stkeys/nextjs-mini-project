@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function TicketReceived(){
   return(
-    <div className="relative w-full overflow-x-hidden  bg-double text-white">
+    <div className="relative w-full overflow-x-hidden  bg-double text-white h-screen">
       <Background />
       <div className="relative z-10 flex items-center justify-center flex-col space-y-10 p-2 font-500">
         <Image
