@@ -13,6 +13,7 @@ export default function TicketReceived(){
           alt="Logo"
           width={150}
           height={50}
+          className="mt-4 sm:mt-8"
         />
         <div className="text-center space-y-4 flex items-center flex-col">
           <h1 className="text-3xl sm:text-5xl font-extrabold ">Congrats, <span className="text-[hsl(7,88%,67%)]">Jonathan Kristof!</span> <br/>Your ticket is ready.</h1>
