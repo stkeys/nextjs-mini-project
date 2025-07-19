@@ -31,7 +31,7 @@ export default function TicketReceived(){
           </div>
           <div className="m-2 absolute inset-0 ">
             <div className="space-y-6 min-sm:space-y-10">
-              <div className="flex gap-4">
+              <div className="flex gap-4 items-center">
                 <Image 
                   src="/assets/images/logo-mark.svg"
                   alt="logo-icon"
@@ -39,24 +39,24 @@ export default function TicketReceived(){
                   height={30}
                 />
                <div>
-                  <p className="text-sm">Coding Conf</p>
-                  <p className="text-xs text-[hsl(252,6%,83%)]">Jan 31, 2025 / Austin, TX</p>
+                  <p className="text-[calc(0.875rem+0.9vw)]">Coding Conf</p>
+                  <p className="text-[calc(0.75rem+0.2vw)] text-[hsl(252,6%,83%)]">Jan 31, 2025 / Austin, TX</p>
                </div>
              </div>
               
-             <div className="flex gap-4">
+             <div className="flex gap-4 items-center">
                 <div>
                   <Image 
                     src="/assets/images/image-avatar.jpg"
                     alt="image-avatar"
                     width={40}
                     height={20}
-                    className="rounded-sm"
+                    className="rounded-sm "
                   />
                 </div>
                 
                 <div>
-                  <p className="text-sm">Jonatan Kristof</p>
+                  <p className="text-[calc(0.875rem+0.9vw)]">Jonatan Kristof</p>
                   <div className="flex gap-2">
                     <Image 
                       src="/assets/images/icon-github.svg"
@@ -64,7 +64,7 @@ export default function TicketReceived(){
                       width={20}
                       height={20}
                     />
-                    <p className="text-xs text-[hsl(252,6%,83%)]">@jonatankristof@f0101</p>
+                    <p className="text-[calc(0.75rem+0.2vw)] text-[hsl(252,6%,83%)]">@jonatankristof@f0101</p>
                     
                   </div>
                  
