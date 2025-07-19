@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function TicketReceived(){
   return(
-    <div className="relative w-full overflow-x-hidden  bg-double text-white h-screen">
+    <div className="relative w-full overflow-x-hidden bg-double text-white h-screen">
       <Background />
       <div className="relative z-10 flex items-center justify-center flex-col space-y-10 p-2 ">
         <Image
@@ -20,7 +20,7 @@ export default function TicketReceived(){
           <p className="sm:w-[40%] text-sm sm:text-md text-[hsl(252,6%,83%)]">we&apos;ve emailed your ticket to <span className="text-[hsl(7,88%,67%)]">jonatan@gmail.com</span> and will send updates in the run up to the event</p>
         </div>
         <div className=" relative min-w-[100px] overflow-hidden">
-          <div className="">
+          <div>
             <Image 
               src="/assets/images/pattern-ticket.svg"
               alt="ticket-frame"
