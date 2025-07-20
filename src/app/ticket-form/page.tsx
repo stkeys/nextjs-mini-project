@@ -23,7 +23,6 @@ export default function TicketForm(){
           alt="Logo"
           width={150}
           height={50}
-          className=""
         />
         <div className="text-center space-y-4 ">
           <h1 className=" text-3xl sm:text-6xl font-extrabold ">Your Journey to Coding Conf <br/>2025 starts here!</h1>
