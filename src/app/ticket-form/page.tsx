@@ -15,7 +15,7 @@ import { PasswordInput } from "@/components/password-input";
 export default function TicketForm(){
  const router = useRouter();
   return(
-    <div className="relative w-full overflow-x-hidden  bg-double text-white">
+    <div className="relative w-full overflow-x-hidden bg-double text-white">
       <Background />
       <div className="relative z-10 flex items-center justify-center flex-col space-y-10  p-4">
         <Image
@@ -28,7 +28,7 @@ export default function TicketForm(){
           <h1 className=" text-3xl sm:text-6xl font-extrabold ">Your Journey to Coding Conf <br/>2025 starts here!</h1>
           <p className="text-sm sm:text-2xl text-[hsl(252,6%,83%)]">secure your spot at next year&apos;s biggest coding conference. </p>
         </div>
-        <div className="max-w-full   justify-start space-y-2">
+        <div className="max-w-full justify-start space-y-2">
           <p className=" text-[hsl(252,6%,83%)]">Upload your avatar</p>
           <div className="w-full h-25 bg-transparent border border-dashed rounded-md flex items-center justify-center flex-col p-4" id="image-view" >
             <Label id="input-file">
