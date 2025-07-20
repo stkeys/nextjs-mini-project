@@ -4,14 +4,7 @@ import Image from "next/image";
 const Background = () => {
   return (
     <div>
-      
-      <Image
-        src="/assets/images/pattern-lines.svg"
-        alt="Pattern Background"
-        fill
-        className="fixed z-0 "
-        priority 
-      />
+
       <Image
         src="/assets/images/pattern-squiggly-line-top.svg"
         alt="Pattern Top Background"
